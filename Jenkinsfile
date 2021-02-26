@@ -12,9 +12,6 @@ pipeline {
             steps {
                 script {
                     app = docker.build(DOCKER_IMAGE_NAME, "-f Dockerfile.django .")
-                    app.inside {
-                        sh 'echo Hello, World!'
-                    }
                 }
             }
         }
